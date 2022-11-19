@@ -1,5 +1,4 @@
 {
-  "homepage": "https://skynet118.github.io/skynet118_frontend/",
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "predeploy": "npm run build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
