@@ -1,4 +1,5 @@
 {
+  "homepage": "https://skynet118.github.io/skynet118_frontend/",
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
@@ -6,9 +7,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2"
