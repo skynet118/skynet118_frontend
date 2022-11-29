@@ -7,7 +7,6 @@ const InfoPart = () => {
             <div className="flex w-[80%] m-auto mt-8 justify-around">
                 <div className="w-[350px]
                                 border-4
-                                
                                 rounded-lg
                                 border-[#6A34FF]">
                     <form className="w-[80%] m-auto h-[400px]">

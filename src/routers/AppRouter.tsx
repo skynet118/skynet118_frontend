@@ -12,6 +12,7 @@ function AppRouter() {
         <HashRouter>
             <Routes>
                 <Route path="/home" element={<HomePage />} />
+                <Route path="/*" element={<div> This page does not exits </div>} />
             </Routes>
         </HashRouter>
     </Fragment>

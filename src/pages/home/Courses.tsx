@@ -1,12 +1,11 @@
+import Title from "../../components/Title"
 
 const Courses = () => {
     return (
-        <div className="w-full">
-            <div className="text-6xl text-[#6A34FF] font-bold mt-8">
-                <h1>COURSES</h1>
-            </div>
-            <div className="w-full">
-                <div className="text-white h-[80px] bg-[#6A34FF] text-6xl font-bold">
+        <div className="w-full mt-[80px]">
+            <Title text="COURSES" color="#6A34FF" />
+            <div className="w-full mt-[80px]">
+                <div className="text-white h-[80px] bg-[#6A34FF] text-6xl font-bold text-center">
                     <h1>SCRATCH</h1>
                 </div>
                 <div className="flex items-center w-full bg-gray-600 h-[400px] flex-col">
