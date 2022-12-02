@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react"
 import logoImg from "../../assets/nico.png"
-import whatsappImg from "../../assets/whatsapp.svg"
+import whatsappImg from "../../assets/links/whatsapp.svg"
 
 const NavbarNoAuth = () => {
     const textPhrases:string[] = [

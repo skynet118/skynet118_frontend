@@ -4,10 +4,12 @@ import classImg from "./../../assets/exercises.svg";
 import teacherImg from "./../../assets/explanation-img.svg";
 import computerImg from "./../../assets/summary.svg";
 import backgroundImg from "./../../assets/background-benefits.svg"
-import Title from "../../components/Title"
+import { Title } from "../../components/Title"
 import CardSmall from "../../components/Card/CardSmall"
+import { ButtonSecondary } from "../../components/Button"
 
 const Content = () => {
+    const submit = () => console.log("Clicking ")
     return(
         <Fragment>
             <div className="mt-[80px]">
@@ -26,12 +28,12 @@ const Content = () => {
                             text="The teacher sumarizes at the end of the lesson, and prepares for the next topic" 
                             image={classImg} />
                 </div>
-                <div className="m-auto w-[150px] h-[50px] text-white bg-[#6A34FF] rounded cursor-pointer text-4xl">
-                    <button className="block m-auto">MORE</button>
-                </div>
+                <ButtonSecondary click={submit}>
+                    MORE
+                </ButtonSecondary>
             </div>
             <div className="min-h-[500px] mt-[100px] bg-cover bg-center bg-fixed bg-no-repeat pt-[80px] pb-[80px]" style={{'backgroundImage': "url("+ backgroundImg +")" }} >
-                <Title text="WHAT ARE THE BENEFITS OF OUR SCHOOL" color="#FFFFFF" />
+                <Title text="WHAT ARE THE BENEFITS OF OUR SCHOOL" color='#ffffff' />
                 <div className="mt-[80px]">
                     <ul className="text-2xl text-white">
                         <li className="m-6">WE SHOW HOW TO PRODUCTIVELY SPEND TIME AT THE COMPUTER.</li>

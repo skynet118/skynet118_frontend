@@ -1,13 +1,15 @@
-import Title from "../../components/Title"
+import { Title, TitleCourse } from "../../components/Title"
+import { ButtonSecondary } from "../../components/Button"
 
 const Courses = () => {
+
+    const submit = () => console.log("click submit")
+    
     return (
         <div className="w-full mt-[80px]">
             <Title text="COURSES" color="#6A34FF" />
             <div className="w-full mt-[80px]">
-                <div className="text-white h-[80px] bg-[#6A34FF] text-6xl font-bold text-center">
-                    <h1>SCRATCH</h1>
-                </div>
+                <TitleCourse text="SCRATCH" classAttr="bg-[#6A34FF]"/>
                 <div className="flex items-center w-full bg-gray-600 h-[400px] flex-col">
                     <div className="flex items-center absolute justify-between w-full">
                         <div className="relative left-[100px]">
@@ -33,9 +35,9 @@ const Courses = () => {
                         </div>
 
                     </div>
-                    <div className="cursor-pointer relative rounded bottom-[50px] bg-[#6A34FF] w-[150px] h-[50px] text-white text-4xl">
-                        <button className="block m-auto" type="button">MORE</button>
-                    </div>
+                    <ButtonSecondary click={submit}>
+                        MORE
+                    </ButtonSecondary>
                 </div>
             </div>
         </div>

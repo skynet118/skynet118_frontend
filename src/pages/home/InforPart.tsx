@@ -1,30 +1,52 @@
 import { Fragment } from "react"
 import infoImg from "./../../assets/info_background.svg"
+import { ButtonPrimary } from "../../components/Button"
+import { InputText } from "../../components/Input"
+import Title from "../../components/Title"
 
 const InfoPart = () => {
+    
+    const submit = () => {
+        console.log("clicking")
+    }
+    
+    const test = () => console.log("input")
+
     return(
         <Fragment>
             <div className="flex w-[80%] m-auto mt-8 justify-around">
                 <div className="w-[350px]
                                 border-4
                                 rounded-lg
-                                border-[#6A34FF]">
-                    <form className="w-[80%] m-auto h-[400px]">
-                        <div className="h-[45px] rounded border-4 border-[#6A34FF] mt-8">
-                            <input placeholder="Name" 
-                                   className="w-full h-full border-0 pl-2 focus:outline-none"
-                                   type="text" />
-                        </div>
-                        <div className="h-[45px] rounded border-4 border-[#6A34FF] mt-8">
-                            <input placeholder="Email" 
-                                   className="w-full h-full border-0 pl-2 focus:outline-none"
-                                   type="email" />
-                        </div>
-                        <div className="h-[45px] rounded border-4 border-[#6A34FF] mt-8">
-                            <input placeholder="Phone number"
-                                   className="w-full h-full border-0 pl-2 focus:outline-none"
-                                   type="tel" />
-                        </div>
+                                border-[#6A34FF] flex h-[500px]">
+                    <form className="w-[80%] m-auto">
+                        <InputText 
+                                    idInput="nameId" 
+                                    name="nameId"
+                                    message="test"
+                                    label="Name"
+                                    placeholder="my name"
+                                    type="text"
+                                    onChange={test}
+                        />
+                        <InputText 
+                                    idInput="emailId" 
+                                    name="emailId"
+                                    message="test"
+                                    label="Email"
+                                    placeholder="example@mail.com"
+                                    type="email"
+                                    onChange={test}
+                        />
+                        <InputText 
+                                    idInput="phoneId" 
+                                    name="phoneId"
+                                    message="test"
+                                    label="Phone Number"
+                                    placeholder="987 654 321"
+                                    type="tel"
+                                    onChange={test}
+                        />
                         <div className="mt-6">
                             <input id="terms" type="checkbox" />
                             <label className="pl-2" 
@@ -34,25 +56,14 @@ const InfoPart = () => {
                                           cursor-pointer">
                                         Term and Conditions
                             </p>
-
                         </div>
-                        <div className="text-center mt-6">
-                            <button className="text-white 
-                                               w-[150px]
-                                               h-[50px]
-                                               rounded
-                                               hover:bg-[#7c4dff]
-                                               bg-[#6A34FF]"
-                                    type="button">
+                        <ButtonPrimary click={submit} >
                                 CONTACT US
-                            </button>
-                        </div>
+                        </ButtonPrimary>
                     </form>
                 </div>
                 <div className="w-[500px]">
-                    <div className="text-[#6A34FF] text-6xl font-bold mb-8 mt-8">
-                        <h1>INFORMATION</h1>
-                    </div>
+                    <Title text="INFORMATION" color="#6A34FF" />
                     <div className="h-[350px]">
                         <img className="h-full" src={infoImg} alt="" />
                     </div>
